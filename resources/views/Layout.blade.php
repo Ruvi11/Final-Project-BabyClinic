@@ -132,10 +132,6 @@
     .navbar {
         width: 100%;
     }
-
-    .ruvi {
-        background-color: white;
-    }
 </style>
 
 <body>
