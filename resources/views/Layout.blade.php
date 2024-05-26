@@ -81,7 +81,7 @@
 
     .sidebar ul li a:hover,
     .sidebar ul li a.active {
-        color:#0c7db1;
+        color: #0c7db1;
         background: white;
         border-right: 2px solid rgb(5, 68, 104);
     }
@@ -128,9 +128,13 @@
         width: 100%;
     }
 
-    
+
     .navbar {
         width: 100%;
+    }
+
+    .ruvi {
+        background-color: white;
     }
 </style>
 
@@ -160,18 +164,18 @@
                     <input class="form-control" type="text" placeholder="clinic name" aria-label="Search">
 
                 </form>
-            
+
+            </div>
+            <div class="content">
+                <!-- content here -->
+
+
+                @yield('content')
+
+                @include('library.scripts')
+
+            </div>
         </div>
-        <div class="content">
-            <!-- content here -->
-
-
-            @yield('content')
-
-            @include('library.scripts')
-
-        </div>
-    </div>
     </div>
 
     <script src="script.js"></script>
