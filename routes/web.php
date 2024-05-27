@@ -9,6 +9,8 @@ use App\Http\Controllers\BabyController;
 use App\Http\Controllers\VaccineController;
 use App\Http\Controllers\Growt_ChartController;
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,7 +40,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/ne', function () {
+Route::get('/news', function () {
     return view('news');
 });
 
@@ -84,3 +86,10 @@ Route::get('/user', function () {
 Route::get('/slide', function () {
     return view('slide');
 });
+
+
+
+
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('/news');

@@ -72,7 +72,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/ne">News</a>
+              <a class="nav-link" href="/news">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contcat">Contact</a>

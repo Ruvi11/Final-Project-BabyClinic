@@ -15,6 +15,7 @@
     <!-- Custom styles for this template-->
     <link href="admin/css/sb-admin-2.min.css" rel="stylesheet">
 
+
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -151,6 +152,7 @@
                 <li><a href="" class="active"><i class="fas fa-home"></i> My dashboard</a></li>
                 <li><a href="{{ url('/employee') }}">Report</a></li>
                 <li><a href="Admin/index">Create Clinic</a></li>
+                <li><a href="posts/create">Add News</a></li>
                 <li> <a href="/event">Charts</a></li>
                 <li><a href="create-clinics">Announcment</a></li>
                 <li><a href="">Feedback</a></li>
@@ -273,7 +275,7 @@
                         <div class="card shadow mb-24">
                             <!-- Card Header - Dropdown -->
                             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">clinic details</h6>
                                 <div class="dropdown no-arrow">
                                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -295,11 +297,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                     <div class="content">
                         <!-- content here -->
 

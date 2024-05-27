@@ -147,7 +147,7 @@
                 <li><a href="{{ url('/employee') }}">Add parent</a></li>
                 <li><a href="{{ url('/baby') }}">Add Baby</a></li>
                 <li> <a href="{{ url('/vaccine') }}">Add vaccine</a></li>
-                <li><a href="">Growth chart</a></li>
+                <li><a href="posts/create">Growth chart</a></li>
                 <li><a href="">Report</a></li>
                 <li><a href='/'>LogOut</a></li>
             </ul>

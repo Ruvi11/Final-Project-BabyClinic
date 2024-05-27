@@ -260,6 +260,7 @@
               <h3 class="sidebar-title">Search</h3>
               <form action="#" class="search-form">
                 <div class="form-group">
+
                   <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
                   <button type="submit" class="btn"><span class="icon mai-search"></span></button>
                 </div>
@@ -271,109 +272,93 @@
 
           </div>
 
-        </div>
-      </div>
-    </div> <!-- .row -->
-  </div> <!-- .container -->
-  </div> <!-- .page-section -->
+          <style>
+            .custom-table {
+              background-color: lightblue;
+            }
+          </style>
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-12">
 
-
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="../calender/css/style.css">
-
-
-
-
-  <section class="ftco-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center mb-1">
-          <h2 class="heading-section">Next Clinic Date</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="content w-100">
-            <div class="calendar-container">
-              <div class="calendar">
-                <div class="year-header">
-                  <span class="left-button fa fa-chevron-left" id="prev"> </span>
-                  <span class="year" id="label"></span>
-                  <span class="right-button fa fa-chevron-right" id="next"> </span>
-                </div>
-                <table class="months-table w-50">
-                  <tbody>
-                    <tr class="months-row">
-                      <td class="month">Jan</td>
-                      <td class="month">Feb</td>
-                      <td class="month">Mar</td>
-                      <td class="month">Apr</td>
-                      <td class="month">May</td>
-                      <td class="month">Jun</td>
-                      <td class="month">Jul</td>
-                      <td class="month">Aug</td>
-                      <td class="month">Sep</td>
-                      <td class="month">Oct</td>
-                      <td class="month">Nov</td>
-                      <td class="month">Dec</td>
+              <div class="form-area">
+                <form method="POST" action="{{ route('posts.store') }}">
+                  @csrf
+                  <table class="table table-bordered custom-table">
+                    <tr>
+                      <th>
+                        <label for="title">Title:</label>
+                      </th>
+                      <td>
+                      <h1>{{ $post->title }}</h1>
+                        @error('title')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                      </td>
                     </tr>
-                  </tbody>
-                </table>
-
-                <table class="days-table w-100">
-                  <td class="day">Sun</td>
-                  <td class="day">Mon</td>
-                  <td class="day">Tue</td>
-                  <td class="day">Wed</td>
-                  <td class="day">Thu</td>
-                  <td class="day">Fri</td>
-                  <td class="day">Sat</td>
-                </table>
-                <div class="frame">
-                  <table class="dates-table w-100">
-                    <tbody class="tbody">
-                    </tbody>
+                    <tr>
+                      <th>
+                        <label for="body">Body:</label>
+                      </th>
+                      <td>
+                        <textarea id="body" name="body" class="form-control">{{ old('body') }}</textarea>
+                        @error('body')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="text-right">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                      </td>
+                    </tr>
                   </table>
-                </div>
-                <button class="button" id="add-button">Add Event</button>
+                </form>
               </div>
             </div>
-            <div class="events-container">
-            </div>
-            <div class="dialog" id="dialog">
-              <h2 class="dialog-header"> Add Clinc Details </h2>
-              <form class="form" id="form">
-                <div class="form-container" align="center">
-                  <label class="form-label" id="valueFromMyButton" for="name">Event name</label>
-                  <input class="input" type="text" id="name" maxlength="36">
-                  <label class="form-label" id="valueFromMyButton" for="count">Time of Event</label>
-                  <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
-                  <input type="button" value="Cancel" class="button" id="cancel-button">
-                  <input type="button" value="OK" class="button button-white" id="ok-button">
-                </div>
-              </form>
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script src="../calender/js/jquery.min.js"></script>
-  <script src="../calender/js/popper.js"></script>
-  <script src="../calender/js/bootstrap.min.js"></script>
-  <script src="../calender/js/main.js"></script>
-
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+@push('css')
+<style>
+  .form-area {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #b3e5fc;
+  }
+
+  .bi-trash-fill {
+    color: red;
+    font-size: 18px;
+  }
+
+  .bi-pencil {
+    color: green;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+</style>
+@endpush
+
+</div>
+</div>
+</div> <!-- .row -->
+</div> <!-- .container -->
+</div> <!-- .page-section -->
+
+
+
+
 
 
 
