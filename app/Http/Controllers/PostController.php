@@ -22,11 +22,11 @@ class PostController extends Controller
 
         $post = Post::create($validated);
 
-        return redirect()->route('/news', $post);
+        return redirect()->route('posts.show', $post);
     }
 
     public function show(Post $post)
     {
-        return view('/news', compact('post'));
+        return view('posts.show', compact('post'));
     }
 }

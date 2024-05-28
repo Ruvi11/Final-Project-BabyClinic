@@ -129,7 +129,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>#e4e6ee
 
 
 
@@ -285,28 +285,28 @@
   </div>
   <div class="page-section bg-light">
     <div class="container">
-      <h1 class="text-center wow fadeInUp">Latest News</h1>
+      <h1 class="text-center wow fadeInUp">Instructions</h1>
       <div class="row mt-5">
         <div class="col-lg-4 py-2 wow zoomIn">
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="../assets/img/blog/blog_1.jpg" alt="">
+                <img src="../assets/img/doctors/milk.jpg" alt="">
               </a>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">List of Countries without Coronavirus case</a></h5>
+              <h5 class="post-title"><a href="blog-details.html">පළමු මාස හතරේදී මවු කිරි පමණක් ලබාදෙන්න</a></h5>
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="../assets/img/person/person_1.jpg" alt="">
+
                   </div>
-                  <span>Roger Adams</span>
+                  <span></span>
                 </div>
-                <span class="mai-time"></span> 1 week ago
+                <span class="mai-time"></span>
               </div>
             </div>
           </div>
@@ -315,22 +315,22 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+                <a href="#"></a>
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="../assets/img/blog/blog_2.jpg" alt="">
+                <img src="../assets/img/doctors/1weight.jpg" alt="">
               </a>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">Recovery Room: News beyond the pandemic</a></h5>
+              <h5 class="post-title"><a href="blog-details.html">මසකට වරක් බර කිරා බලන්න.</a></h5>
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="../assets/img/person/person_1.jpg" alt="">
+
                   </div>
-                  <span>Roger Adams</span>
+                  <span></span>
                 </div>
-                <span class="mai-time"></span> 4 weeks ago
+                <span class="mai-time"></span>
               </div>
             </div>
           </div>
@@ -339,29 +339,29 @@
           <div class="card-blog">
             <div class="header">
               <div class="post-category">
-                <a href="#">Covid19</a>
+                <a href="#"></a>
               </div>
               <a href="blog-details.html" class="post-thumb">
-                <img src="../assets/img/blog/blog_3.jpg" alt="">
+                <img src="../assets/img/doctors/vacc1.jpg" alt="">
               </a>
             </div>
             <div class="body">
-              <h5 class="post-title"><a href="blog-details.html">What is the impact of eating too much sugar?</a></h5>
+              <h5 class="post-title"><a href="blog-details.html">වයස අනුව ලැබිය යුතු ප්‍රතිශක්තිකරණ ලබාදෙන්න</a></h5>
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="../assets/img/person/person_2.jpg" alt="">
+
                   </div>
-                  <span>Diego Simmons</span>
+
                 </div>
-                <span class="mai-time"></span> 2 months ago
+                <span class="mai-time"></span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="col-12 text-center mt-4 wow zoomIn">
-          <a href="blog.html" class="btn btn-primary">Read More</a>
+          <a href="/about" class="btn btn-primary">Read More</a>
         </div>
 
       </div>
@@ -409,12 +409,12 @@
     <div class="container">
       <div class="row px-md-3">
         <div class="col-sm-6 col-lg-3 py-3">
-          <h5>Company</h5>
+          <h5>MOH-MAHO</h5>
           <ul class="footer-menu">
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Editorial Team</a></li>
-            <li><a href="#">Protection</a></li>
+            <li><a href="#">Special News</a></li>
+            <li><a href="#">Contact</a></li>
+
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
@@ -427,16 +427,16 @@
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
-          <h5>Our partner</h5>
+          <h5>Our Staff</h5>
           <ul class="footer-menu">
-            <li><a href="#">One-Fitness</a></li>
-            <li><a href="#">One-Drugs</a></li>
+            <li><a href="#">DOCTOR</a></li>
+            <li><a href="#">General Midwife</a></li>
             <li><a href="#">One-Live</a></li>
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
-          <h5>Contact</h5>
-          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+          <h5>Contact Informations</h5>
+          <p class="footer-link mt-2">351 Maho Street, MA 02038</p>
           <a href="#" class="footer-link">701-573-7582</a>
           <a href="#" class="footer-link">healthcare@temporary.net</a>
 
@@ -450,6 +450,7 @@
           </div>
         </div>
       </div>
+
 
       <hr>
 

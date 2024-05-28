@@ -52,7 +52,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+                <a class="navbar-brand" href="#"><span class="text-primary">Step</span>-Child</a>
 
 
 
@@ -70,7 +70,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/ne">News</a>
+                            <a class="nav-link" href="/news">News</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/contcat">Contact</a>
@@ -127,17 +127,16 @@
         </div>
     </div>
     <!-- .banner-home -->
-
     <footer class="page-footer">
         <div class="container">
             <div class="row px-md-3">
                 <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Company</h5>
+                    <h5>MOH-MAHO</h5>
                     <ul class="footer-menu">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Career</a></li>
-                        <li><a href="#">Editorial Team</a></li>
-                        <li><a href="#">Protection</a></li>
+                        <li><a href="#">Special News</a></li>
+                        <li><a href="#">Contact</a></li>
+
                     </ul>
                 </div>
                 <div class="col-sm-6 col-lg-3 py-3">
@@ -150,16 +149,16 @@
                     </ul>
                 </div>
                 <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Our partner</h5>
+                    <h5>Our Staff</h5>
                     <ul class="footer-menu">
-                        <li><a href="#">One-Fitness</a></li>
-                        <li><a href="#">One-Drugs</a></li>
+                        <li><a href="#">DOCTOR</a></li>
+                        <li><a href="#">General Midwife</a></li>
                         <li><a href="#">One-Live</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-lg-3 py-3">
-                    <h5>Contact</h5>
-                    <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+                    <h5>Contact Informations</h5>
+                    <p class="footer-link mt-2">351 Maho Street, MA 02038</p>
                     <a href="#" class="footer-link">701-573-7582</a>
                     <a href="#" class="footer-link">healthcare@temporary.net</a>
 
@@ -173,6 +172,7 @@
                     </div>
                 </div>
             </div>
+
 
             <hr>
 

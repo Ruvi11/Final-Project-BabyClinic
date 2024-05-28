@@ -25,6 +25,12 @@
                             <label>Parent Address</label>
                             <input type="text" class="form-control" name="address">
                         </div>
+                        <div class="col-md-6">
+                            <label>Clinic Id</label>
+                            <input type="text" class="form-control" name="clinic_id">
+                        </div>
+
+
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -55,6 +61,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Parent Id</th>
                         <th scope="col">Parent Name</th>
+                        <th scope="col">Clinic Id</th>
                         <th scope="col">Address</th>
                         <th scope="col">Reg_date</th>
                         <th scope="col">Email</th>
@@ -70,6 +77,7 @@
                         <td scope="col">{{ ++$key }}</td>
                         <td scope="col">{{ $employee->id }}</td>
                         <td scope="col">{{ $employee->emp_name }}</td>
+                        <td scope="col">{{ $user->clinic_id}}</td>
                         <td scope="col">{{ $employee->address }}</td>
                         <td scope="col">{{ $employee->created_at }}</td>
                         <td scope="col">{{ $employee->email }}</td>

@@ -81,15 +81,21 @@ Route::get('/contact', function () {
 });
 
 Route::get('/user', function () {
-    return view('user');
+    return view('user/profile');
 });
 Route::get('/slide', function () {
     return view('slide');
 });
+
+Route::get('/mychild', function () {
+    return view('user/mychild');
+});
+
+
 
 
 
 
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('/news');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');

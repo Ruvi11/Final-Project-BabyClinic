@@ -52,7 +52,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="#"><span class="text-primary">Step</span>-Child</a>
 
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +69,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/ne">News</a>
+              <a class="nav-link" href="/news">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contcat">Contact</a>
@@ -138,7 +138,7 @@
           <h1 class="text-center mb-3">Welcome to Your baby Health Center</h1>
           <div class="text-lg">
             <p>MOH ප්‍රදේශ ශ්‍රී ලංකාවේ මහජන සෞඛ්‍ය ජාලයේ කුඩාම සෞඛ්‍ය ඒකක වේ. සෑම MOH ප්‍රදේශයකටම කැපවූ ප්‍රාථමික සෞඛ්‍ය සේවා සේවකයින් කණ්ඩායමක් සිටින අතර එය කාර්ය මණ්ඩල කාණ්ඩ කිහිපයකින් සමන්විත වේ. MBBS සුදුසුකම් ලත් වෛද්‍ය නිලධාරියෙකු වන MOH, MOH කණ්ඩායමේ කළමනාකරු ලෙස කටයුතු කරයි. ළමා සෞඛ්‍ය පද්ධතියට අයත් රෝග නිවාරණ ක්‍රියාකාරකම් රට පුරා බෙදා හරින ලද සෞඛ්‍ය වෛද්‍ය නිලධාරී (MOH) කණ්ඩායම් 343කට ආසන්න ප්‍රමාණයක් මගින් සිදු කරනු ලබයි.</p>
-            <p>Expedita iusto sunt beatae esse id nihil voluptates magni, excepturi distinctio impedit illo, incidunt iure facilis atque, inventore reprehenderit quidem aliquid recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod ad sequi atque accusamus deleniti placeat dignissimos illum nulla voluptatibus vel optio, molestiae dolore velit iste maxime, nobis odio molestias!</p>
+            <p>යහපත් සවුක්යෙන් පිරිපුන් ජනතාවක් මහව සෞඛ්‍ය වෛද්‍ය නිලධාරී බල ප්‍රදේශයට උරුමකර දෙමින් වයඹ පළාතේ රෝග නිවාරණය සඳහා කැප වූ හොඳම ආයතනය වීම අපගේ දැක්මයි.කාර්යක්ෂම,නිපුන,සුහදශීලී කාර්ය මණ්ඩලයකට ක්‍රියාකාරකම් තුලින් ප්‍රජා සෞක්‍ය සේවාවක් බලගන්වමින්,ප්‍රමාණාත්මක හා ගුණාත්මක සෞක්‍ය සේවයක් ප්‍රජාවට උරුම කරදීම. </p>
           </div>
 
         </div>
@@ -249,12 +249,12 @@
       <div class="container">
         <div class="row px-md-3">
           <div class="col-sm-6 col-lg-3 py-3">
-            <h5>Company</h5>
+            <h5>MOH-MAHO</h5>
             <ul class="footer-menu">
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Career</a></li>
-              <li><a href="#">Editorial Team</a></li>
-              <li><a href="#">Protection</a></li>
+              <li><a href="#">Special News</a></li>
+              <li><a href="#">Contact</a></li>
+
             </ul>
           </div>
           <div class="col-sm-6 col-lg-3 py-3">
@@ -267,16 +267,16 @@
             </ul>
           </div>
           <div class="col-sm-6 col-lg-3 py-3">
-            <h5>Our partner</h5>
+            <h5>Our Staff</h5>
             <ul class="footer-menu">
-              <li><a href="#">One-Fitness</a></li>
-              <li><a href="#">One-Drugs</a></li>
+              <li><a href="#">DOCTOR</a></li>
+              <li><a href="#">General Midwife</a></li>
               <li><a href="#">One-Live</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-lg-3 py-3">
-            <h5>Contact</h5>
-            <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+            <h5>Contact Informations</h5>
+            <p class="footer-link mt-2">351 Maho Street, MA 02038</p>
             <a href="#" class="footer-link">701-573-7582</a>
             <a href="#" class="footer-link">healthcare@temporary.net</a>
 
@@ -290,6 +290,7 @@
             </div>
           </div>
         </div>
+
 
         <hr>
 
