@@ -42,7 +42,7 @@
     }
 
     .sidebar .profile {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         text-align: center;
     }
 
@@ -140,7 +140,7 @@
             <div class="profile">
                 <img src="../assets/img/4logo.png" alt="">
                 <h3>Daladagama Clinic</h3>
-                <p>Dashboard</p>
+                <p>Midwife Dashboard</p>
             </div>
             <ul>
                 <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
@@ -148,7 +148,7 @@
                 <li><a href="{{ url('/baby') }}">Add Baby</a></li>
                 <li> <a href="{{ url('/vaccine') }}">Add vaccine</a></li>
                 <li><a href="posts/create">Growth chart</a></li>
-                <li><a href="">Report</a></li>
+                <li><a href="/mychild">Report</a></li>
                 <li><a href='/'>LogOut</a></li>
             </ul>
         </div>
@@ -157,8 +157,7 @@
                 <a href="#" class="hamburger"><i class="fas fa-bars"></i></a>
 
                 <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control" type="text" placeholder="clinic name" aria-label="Search">
-
+                    <input type="text" id="parentId" name="parentId" value="Daladagama clinic" readonly>
                 </form>
 
             </div>

@@ -22,31 +22,33 @@
                         <div class="col-md-6">
                             <label>Baby Name</label>
                             <input type="text" class="form-control" name="b_name">
-
                         </div>
-
-                    </div><br>
-                    <div class="row">
                         <div class="col-md-6">
                             <label>Date</label>
                             <input type="date" class="form-control" name="date">
 
                         </div>
+
+                    </div><br>
+                    <div class="row">
+
                         <div class="col-md-6">
                             <label>Height</label>
                             <input type="text" class="form-control" name="height">
-
                         </div>
                         <div class="col-md-6">
                             <label>Weight</label>
                             <input type="text" class="form-control" name="Weight">
-
+                        </div>
+                        <div class="col-md-6">
+                            <label>BMI</label>
+                            <input type="text" class="form-control" name="BMI">
                         </div>
 
 
                         <div class="row">
                             <div class="col-md-12 mt-3">
-                                <input type="submit" class="btn btn-primary" value="Register">
+                                <input type="submit" class="btn btn-primary" value="ADD">
                             </div>
 
                         </div>

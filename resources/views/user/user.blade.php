@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
     * {
         list-style: none;
         text-decoration: none;
@@ -31,7 +32,7 @@
 
     .sidebar {
         width: 225px;
-        background: lightslategray;
+        background: darkslateblue;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -40,7 +41,7 @@
     }
 
     .sidebar .profile {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align: center;
     }
 
@@ -62,19 +63,26 @@
         font-size: 14px;
     }
 
+    .sidebar ul li {
+        position: relative;
+    }
+
     .sidebar ul li a {
-        display: block;
+        display: flex;
+        align-items: center;
         padding: 13px 30px;
         border-bottom: 1px solid #10558d;
         color: rgb(241, 237, 237);
         font-size: 16px;
-        position: relative;
+        transition: all 0.3s ease;
     }
 
     .sidebar ul li a .icon {
         color: #dee4ec;
         width: 30px;
-        display: inline-block;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 18px;
     }
 
     .sidebar ul li a:hover,
@@ -87,11 +95,6 @@
     .sidebar ul li a:hover .icon,
     .sidebar ul li a.active .icon {
         color: #0c7db1;
-    }
-
-    .sidebar ul li a:hover:before,
-    .sidebar ul li a.active:before {
-        display: block;
     }
 
     .section {
@@ -108,11 +111,14 @@
         padding: 0 30px;
     }
 
+    .top_navbar .back-icon,
     .top_navbar .hamburger a {
         font-size: 28px;
         color: #f4fbff;
+        margin-right: 15px;
     }
 
+    .top_navbar .back-icon:hover,
     .top_navbar .hamburger a:hover {
         color: #a2ecff;
     }
@@ -188,61 +194,75 @@
                 <p>User Profile</p>
             </div>
             <ul>
-                <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="/user">User Account</a></li>
-                <li><a href="/mychild"> Baby Details</a></li>
-                <li><a href="/vacc"> vaccine Details</a></li>
-                <li><a href="/chart">Growth chart</a></li>
-                <li><a href='/'>LogOut</a></li>
+                <li><a href="" class="active"><i class="fas fa-home icon"></i> Home</a></li>
+                <li><a href=""><i class="fas fa-user icon"></i> My Account</a></li>
+                <li><a href="/mychild"><i class="fas fa-baby icon"></i> Baby Details</a></li>
+                <li><a href="/vacc"><i class="fas fa-syringe icon"></i> Vaccine Details</a></li>
+                <li><a href="/chart"><i class="fas fa-chart-line icon"></i> Growth Chart</a></li>
+                <li><a href="/"><i class="fas fa-sign-out-alt icon"></i> LogOut</a></li>
             </ul>
         </div>
-
-
         <div class="section">
             <div class="top_navbar">
+                <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                 <a href="#" class="hamburger"><i class="fas fa-bars"></i></a>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control" type="text" placeholder="WELCOME YOUR CLINIC" aria-label="Search">
+                <form class="form-inline my-4 my-lg-0">
+                    <h4>WELCOME YOUR CLINIC</h4>
                 </form>
             </div>
             <div class="content">
                 <!-- content here -->
-                <div id="babyProfileForm" class="form-container">
-                    <img src="../assets/img/my1.jpg" alt="Baby Profile" class="account-image">
-                    <h2>Baby Vaccine Details</h2>
+                <div class="form-container">
+                    <img src="../assets/img/my1.jpg" alt="My Account" class="account-image">
+                    <h2>My Account</h2>
                     <form>
                         <div class="form-group">
-                            <label for="babyName">Vaccine Name</label>
-                            <input type="text" id="v_name" name="v_name" value="Poliyo" readonly>
+                            <label for="parentId">Parent Id</label>
+                            <input type="text" id="parentId" name="parentId" value="1" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="bornPlace">Vaccine ID</label>
-                            <input type="text" id="v_id" name="v_id" value="E20402" readonly>
+                            <label for="parentName">Parent Name</label>
+                            <input type="text" id="parentName" name="parentName" value="John Doe" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="babyAge">Vaccine date</label>
-                            <input type="date" id="vac_date" name="vac_date" value="2024/05/04" readonly>
+                            <label for="clinicId">Clinic Id</label>
+                            <input type="text" id="clinicId" name="clinicId" value="101" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="gender">Baby Name</label>
-                            <input type="text" id="b_name" name="b_name" value="Female" readonly>
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" value="123 Main St, Anytown" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="bornWeight">Born Weight</label>
-                            <input type="text" id="bornWeight" name="bornWeight" value="3.2 kg" readonly>
+                            <label for="regDate">Reg Date</label>
+                            <input type="date" id="regDate" name="regDate" value="2023-05-01" readonly>
                         </div>
-
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="john.doe@example.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" value="(555) 555-5555" readonly>
+                        </div>
                     </form>
                 </div>
-
                 @yield('content')
-
                 @include('library.scripts')
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.querySelector('body');
+            const hamburger = document.querySelector('.hamburger a');
+
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                body.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -454,7 +454,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MOH-MAHO</a>. All right reserved</p>
     </div> <!-- .container -->
   </footer> <!-- .page-footer -->
 

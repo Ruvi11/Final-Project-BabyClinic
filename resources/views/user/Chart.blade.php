@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+<style>
     * {
         list-style: none;
         text-decoration: none;
@@ -31,7 +31,7 @@
 
     .sidebar {
         width: 225px;
-        background: lightslategray;
+        background: darkslateblue;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -40,7 +40,7 @@
     }
 
     .sidebar .profile {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align: center;
     }
 
@@ -62,19 +62,26 @@
         font-size: 14px;
     }
 
+    .sidebar ul li {
+        position: relative;
+    }
+
     .sidebar ul li a {
-        display: block;
+        display: flex;
+        align-items: center;
         padding: 13px 30px;
         border-bottom: 1px solid #10558d;
         color: rgb(241, 237, 237);
         font-size: 16px;
-        position: relative;
+        transition: all 0.3s ease;
     }
 
     .sidebar ul li a .icon {
         color: #dee4ec;
         width: 30px;
-        display: inline-block;
+        text-align: center;
+        margin-right: 10px;
+        font-size: 18px;
     }
 
     .sidebar ul li a:hover,
@@ -87,11 +94,6 @@
     .sidebar ul li a:hover .icon,
     .sidebar ul li a.active .icon {
         color: #0c7db1;
-    }
-
-    .sidebar ul li a:hover:before,
-    .sidebar ul li a.active:before {
-        display: block;
     }
 
     .section {
@@ -108,11 +110,14 @@
         padding: 0 30px;
     }
 
+    .top_navbar .back-icon,
     .top_navbar .hamburger a {
         font-size: 28px;
         color: #f4fbff;
+        margin-right: 15px;
     }
 
+    .top_navbar .back-icon:hover,
     .top_navbar .hamburger a:hover {
         color: #a2ecff;
     }
@@ -179,6 +184,8 @@
     }
 </style>
 
+</head>
+
 <body>
     <div class="wrapper">
         <div class="sidebar">
@@ -188,48 +195,51 @@
                 <p>User Profile</p>
             </div>
             <ul>
-                <li><a href="" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="/user">User Account</a></li>
-                <li><a href="/mychild"> Baby Details</a></li>
-                <li><a href="/vacc"> vaccine Details</a></li>
-                <li><a href="/chart">Growth chart</a></li>
-                <li><a href='/'>LogOut</a></li>
+                <li><a href="" class="active"><i class="fas fa-home icon"></i> Home</a></li>
+                <li><a href=""><i class="fas fa-user icon"></i> My Account</a></li>
+                <li><a href="/mychild"><i class="fas fa-baby icon"></i> Baby Details</a></li>
+                <li><a href="/vacc"><i class="fas fa-syringe icon"></i> Vaccine Details</a></li>
+                <li><a href="/chart"><i class="fas fa-chart-line icon"></i> Growth Chart</a></li>
+                <li><a href="/"><i class="fas fa-sign-out-alt icon"></i> LogOut</a></li>
             </ul>
         </div>
-
-
         <div class="section">
             <div class="top_navbar">
+                <a href="/vacc" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                 <a href="#" class="hamburger"><i class="fas fa-bars"></i></a>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control" type="text" placeholder="WELCOME YOUR CLINIC" aria-label="Search">
+                    <h4>WELCOME YOUR CLINIC</h4>
                 </form>
             </div>
             <div class="content">
                 <!-- content here -->
                 <div id="babyProfileForm" class="form-container">
                     <img src="../assets/img/my1.jpg" alt="Baby Profile" class="account-image">
-                    <h2>Baby Vaccine Details</h2>
+                    <h2>Baby's Growth Details</h2>
                     <form>
                         <div class="form-group">
-                            <label for="babyName">Vaccine Name</label>
-                            <input type="text" id="v_name" name="v_name" value="Poliyo" readonly>
+                            <label for="babyName">Baby ID</label>
+                            <input type="text" id="b_id" name="b_id" value="D/42/146" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="bornPlace">Vaccine ID</label>
-                            <input type="text" id="v_id" name="v_id" value="E20402" readonly>
+                            <label for="bornPlace">Baby Name</label>
+                            <input type="text" id="b_name" name="b_name" value="RUVINI" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="babyAge">Vaccine date</label>
-                            <input type="date" id="vac_date" name="vac_date" value="2024/05/04" readonly>
+                            <label for="babyAge">Date</label>
+                            <input type="date" id="date" name="date" value="04" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="gender">Baby Name</label>
-                            <input type="text" id="b_name" name="b_name" value="Female" readonly>
+                            <label for="gender">Baby Height</label>
+                            <input type="text" id="height" name="height" value="2" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="bornWeight">Born Weight</label>
-                            <input type="text" id="bornWeight" name="bornWeight" value="3.2 kg" readonly>
+                            <label for="bornWeight">Baby Weight</label>
+                            <input type="text" id="Weight" name="Weight" value="3.2 kg" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="bornWeight">Baby'S BMI</label>
+                            <input type="text" id="BMI" name="BMI" value="3.2 " readonly>
                         </div>
 
                     </form>
@@ -242,7 +252,19 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.querySelector('body');
+            const hamburger = document.querySelector('.hamburger a');
+
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                body.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

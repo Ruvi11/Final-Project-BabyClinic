@@ -80,8 +80,8 @@ Route::get('/contact', function () {
     return view('contcat');
 });
 
-Route::get('/user', function () {
-    return view('user/profile');
+Route::get('/vacc', function () {
+    return view('user/vacc');
 });
 Route::get('/slide', function () {
     return view('slide');
@@ -91,7 +91,18 @@ Route::get('/mychild', function () {
     return view('user/mychild');
 });
 
+Route::get('/cal', function () {
+    return view('calender');
+});
 
+
+Route::get('/user', function () {
+    return view('user/user');
+});
+
+Route::get('/chart', function () {
+    return view('user/Chart');
+});
 
 
 

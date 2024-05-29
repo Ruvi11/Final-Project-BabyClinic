@@ -32,7 +32,7 @@
                         </div>
                         <div class="col-md-6">
                             <label>Baby Name</label>
-                            <input type="text" class="form-control" name="phone">
+                            <input type="text" class="form-control" name="b_name">
 
                         </div>
 

@@ -40,7 +40,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                    <p class="mt-3 text-center">Create an account? <a href="{{ url('registration') }}">Register</a></p>
+                    <p class="mt-3 text-center"> <a href="{{ url('registration') }}"></a></p>
                 </div>
             </div>
         </div>
