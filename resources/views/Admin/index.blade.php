@@ -10,7 +10,6 @@
 <style>
     .back-button {
         background-color: white;
-        /* Green */
         border: none;
         color: black;
         padding: 10px 32px;
@@ -33,21 +32,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ url('index') }}" style="color:white;margin-right:10px;">Clinic</a>
-                </li> --}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="priorityDropdown" role-="button" data-toggle="dropdown" style="color:white;margin-right:50px;">
+                    <a class="nav-link dropdown-toggle" href="#" id="priorityDropdown" role="button" data-toggle="dropdown" style="color:white;margin-right:50px;">
                         Clinic
                     </a>
                     <div class="dropdown-menu" aria-labelledby="priorityDropdown">
                         <a class="dropdown-item" href="{{ url('create-clinics') }}">Create Clinic</a>
-                        <a class="dropdown-item" href="">Manage Clinics</a>
+                        <a class="dropdown-item" href="{{ route('tasks.index') }}">Manage Clinics</a>
                     </div>
-                <li class="nav-item">
-
-
-                </li>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-light rounded-pill" href="{{ url('/') }}" style="margin-right:50px;">Logout</a>
@@ -63,7 +55,7 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Namw</th>
+                        <th>Name</th>
                         <th>Email</th>
                         <th>Contact</th>
                         <th>Role</th>
@@ -78,20 +70,16 @@
                         <td>{{ $task->id }}</td>
                         <td>{{ $task->name }}</td>
                         <td>{{ $task->email }}</td>
-                        <td>
-                            {{$task->contact}}
-                        </td>
-                        <td>
-                            {{$task->role}}
-                        </td>
+                        <td>{{ $task->contact }}</td>
+                        <td>{{ $task->role }}</td>
                         <td>{{ $task->created_at }}</td>
                         <td>
-                            <a class="btn btn-primary btn-sm" href=" " style="width:80px;">Edit</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('tasks.edit', $task->id) }}" style="width:80px;">Edit</a>
                         </td>
                         <td>
-                            <form action="" method="POST">
+                            <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
                                 @csrf
-                                @method('POST')
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" style="width:80px;">Delete</button>
                             </form>
                         </td>

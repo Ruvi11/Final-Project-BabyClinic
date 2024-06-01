@@ -1,47 +1,167 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Task Manager</title>
+</head>
+<style>
+    .back-button {
+        background-color: white;
+        /* Green */
+        border: none;
+        color: black;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                {{-- <li class="nav-item">
+                <a class="nav-link" href="{{ url('index') }}" style="color:white;margin-right:10px;">Clinic</a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="priorityDropdown" role-="button" data-toggle="dropdown" style="color:white;margin-right:50px;">
+                        Clinic
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="priorityDropdown">
+                        <a class="dropdown-item" href="{{ url('create-clinics') }}">Create Clinic</a>
+                        <a class="dropdown-item" href="">Manage Clinics</a>
+                    </div>
+                <li class="nav-item">
+
+
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-light rounded-pill" href="{{ url('/') }}" style="margin-right:50px;">Logout</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+    <div class="container" style="margin-top: 20px;">
+        @if ($tasks && $tasks->count() > 0)
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Namw</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Role</th>
+                        <th>Created_at</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($tasks as $task)
+                    <tr class="{{ $task->days < 1 &&  $task->status == 'incomplete' ? 'table-danger' : '' }}">
+                        <td>{{ $task->id }}</td>
+                        <td>{{ $task->name }}</td>
+                        <td>{{ $task->email }}</td>
+                        <td>
+                            {{$task->contact}}
+                        </td>
+                        <td>
+                            {{$task->role}}
+                        </td>
+                        <td>{{ $task->created_at }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" href=" " style="width:80px;">Edit</a>
+                        </td>
+                        <td>
+                            <form action="" method="POST">
+                                @csrf
+                                @method('POST')
+                                <button type="submit" class="btn btn-danger btn-sm" style="width:80px;">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
+        @else
+        <p style="color: red; text-align: center; font-weight: bold; margin-top: 20px;">No tasks found.</p>
+        @endif
+    </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+</html>
 
-            <x-primary-button class="ml-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+
+
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Mail;
+use App\Models\User;
+use App\Mail\NewUserWelcome;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
+
+class ClinicController extends Controller
+{
+    public function index()
+    {
+        return view('Admin.CreateClinics');
+    }
+
+
+    public function create(Request $request)
+    {
+        $request->validate([
+            'Name' => 'required|string|max:255',
+            'Email' => 'required|email|unique:users,email',
+            'Contact' => 'required',
+            'Password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = User::create([
+            'name' => $request->Name,
+            'email' => $request->Email,
+            'contact' => $request->Contact,
+            'password' => Hash::make($request->Password),
+            'role' => 'clinic',
+        ]);
+
+
+
+        // Send welcome email
+        // Mail::to($user->email)->send(new NewUserWelcome($user, $request->Password));
+
+
+        return redirect()->route('home')->with('success', 'Clinic created successfully.');
+    }
+}

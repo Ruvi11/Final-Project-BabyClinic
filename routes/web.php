@@ -123,3 +123,9 @@ Route::get('/pro', function () {
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+
+Route::get('/tasks', [ClinicController::class, 'listTasks'])->name('tasks.index');
+Route::get('/tasks/edit/{id}', [ClinicController::class, 'edit'])->name('tasks.edit');
+Route::post('/tasks/update/{id}', [ClinicController::class, 'update'])->name('tasks.update');
+Route::delete('/tasks/delete/{id}', [ClinicController::class, 'destroy'])->name('tasks.destroy');
