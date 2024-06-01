@@ -37,6 +37,16 @@ Route::middleware(['auth'])->group(function () {
     Route::post('store-clinic', [ClinicController::class, 'create'])->name('store-clinic');
     Route::get('create-clinics', [ClinicController::class, 'index'])->name('create-clinics');
 });
+
+Route::get('/create', function () {
+    return view('Auth/midreg');
+});
+
+
+Route::get('/midlogin', function () {
+    return view('Auth/midlogin');
+});
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -105,6 +115,9 @@ Route::get('/chart', function () {
 });
 
 
+Route::get('/pro', function () {
+    return view('profile/edit');
+});
 
 
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');

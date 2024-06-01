@@ -20,6 +20,50 @@
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+
+  <style>
+    .nav-item.dropdown {
+      position: relative;
+    }
+
+    .dropdown-toggle::after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 0.255em;
+      vertical-align: 0.255em;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      float: left;
+      min-width: 10rem;
+      padding: 0.5rem 0;
+      margin: 0.125rem 0 0;
+      font-size: 1rem;
+      color: #212529;
+      text-align: left;
+      list-style: none;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.25rem;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -77,10 +121,17 @@
             <li class="nav-item">
               <a class="nav-link" href="/contcat">Contact</a>
             </li>
-            <li class="nav-item">
-              <a href="{{ url('login') }}" class="btn btn-primary btn-lg mx-2 button">Login</a>
-
+            <li class="nav-item dropdown">
+              <a href="{{ url('login') }}" class="btn btn-primary btn-lg mx-2 button dropdown-toggle" id="loginDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                <a class="dropdown-item" href="{{ url('login') }}">Admin</a>
+                <a class="dropdown-item" href="{{ url('/midlogin') }}">Midwife</a>
+                <a class="dropdown-item" href="{{ url('login') }}">User</a>
+              </div>
             </li>
+
           </ul>
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->
