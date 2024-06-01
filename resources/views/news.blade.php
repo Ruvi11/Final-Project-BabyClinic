@@ -4,26 +4,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
-
   <title>One Health - Medical Center HTML5 Template</title>
-
   <link rel="stylesheet" href="../assets/css/maicons.css">
-
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
   <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
-
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
   <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
+<style>
+  .table-custom {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  .table-custom th,
+  .table-custom td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table-custom th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  .table-custom td a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .table-custom td a:hover {
+    text-decoration: underline;
+  }
+</style>
 
 <body>
-
   <!-- Back to top button -->
   <div class="back-to-top"></div>
 
@@ -53,13 +73,9 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#"><span class="text-primary">Step</span>-Child</a>
-
-
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupport" aria-controls="navbarSupport" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -68,7 +84,6 @@
             <li class="nav-item">
               <a class="nav-link" href="/about">About Us</a>
             </li>
-
             <li class="nav-item active">
               <a class="nav-link" href="/ne">News</a>
             </li>
@@ -106,34 +121,25 @@
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
-                    <img src="../assets/img/doc.jpg" alt="">
+                    <img src="../assets/img/news.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
-                  <h5 class="post-title"><a href="blog-details.html"> කුඩා දරුවන්ගේ එන්නත්කරන ලබාදීම සිදුකරයි.</a></h5>
+                  <h5 class="post-title"><a href="blog-details.html">පොදු ළදරු රෝග සහ සෘතුමය සෞඛ්‍ය ගැටළු සමඟ කටයුතු කරන්නේ කෙසේද යන්න පිළිබඳ දෙමාපියන් සඳහා උපදෙස්.</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../assets/img/doctors/clinic.jpg" alt="">
                   </a>
@@ -142,37 +148,26 @@
                   <h5 class="post-title"><a href="blog-details.html">සුහද කාර්යක්ෂම හෙද මඩුල්ලක් තුලින් ඔබට සේවය සපයයි</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../assets/img/doctors/1weight.jpg" alt="">
                   </a>
                 </div>
                 <div class="body">
-                  <h5 class="post-title"><a href="blog-details.html">දරුවන්ගේ බර සටහන් නිවැරදි ලෙස මැන බලා පූෂණ තත්වය සටහන් කරයි. </h5>
+                  <h5 class="post-title"><a href="blog-details.html">දරුවන්ගේ බර සටහන් නිවැරදි ලෙස මැන බලා පූෂණ තත්වය සටහන් කරයි.</h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -180,9 +175,7 @@
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../assets/img/doctors/th.jpg" alt="">
                   </a>
@@ -191,23 +184,16 @@
                   <h5 class="post-title"><a href="blog-details.html">යහපත් පවුල් සැලසුම් සදහා උපදෙස් වැඩසටහන් පවත්වනු ලැබේ.</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../assets/img/CARE.jpg" alt="">
                   </a>
@@ -216,10 +202,7 @@
                   <h5 class="post-title"><a href="blog-details.html">දරුවන්ට ලැබිය යුතු රැකවරණය ලබා දීම</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
                     <span class="mai-time"></span>
                   </div>
@@ -229,9 +212,7 @@
             <div class="col-sm-6 py-3">
               <div class="card-blog">
                 <div class="header">
-                  <div class="post-category">
-
-                  </div>
+                  <div class="post-category"></div>
                   <a href="blog-details" class="post-thumb">
                     <img src="../assets/img/doctors/happy (2).jpg" alt="">
                   </a>
@@ -240,84 +221,94 @@
                   <h5 class="post-title"><a href="blog-details.html">ඔබගේ පවූල දරුවන් සමග නිතර සතුට පිරි නිවහනක් බවට කරගන්න</a></h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
-                      <div class="avatar-img">
-
-                      </div>
-
+                      <div class="avatar-img"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
-
           </div> <!-- .row -->
         </div>
 
         <div class="col-lg-4">
-          <div class="sidebar">
-            <div class="sidebar-block">
-              <h3 class="sidebar-title">Search</h3>
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-                  <button type="submit" class="btn"><span class="icon mai-search"></span></button>
-                </div>
-              </form>
-            </div>
-
-            <div class="sidebar-block">
-              <h3 class="sidebar-title">Recent Blog</h3>
-              <div class="blog-item">
-                <a class="post-thumb" href="">
-                  <img src="../assets/img/blog/blog_1.jpg" alt="">
-                </a>
-                <div class="content">
-                  <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
-                  <div class="meta">
-                    <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
-                    <a href="#"><span class="mai-person"></span> Admin</a>
-                    <a href="#"><span class="mai-chatbubbles"></span> 19</a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-item">
-                <a class="post-thumb" href="">
-                  <img src="../assets/img/blog/blog_2.jpg" alt="">
-                </a>
-                <div class="content">
-                  <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
-                  <div class="meta">
-                    <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
-                    <a href="#"><span class="mai-person"></span> Admin</a>
-                    <a href="#"><span class="mai-chatbubbles"></span> 19</a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-item">
-                <a class="post-thumb" href="">
-                  <img src="../assets/img/blog/blog_3.jpg" alt="">
-                </a>
-                <div class="content">
-                  <h5 class="post-title"><a href="#">Even the all-powerful Pointing has no control</a></h5>
-                  <div class="meta">
-                    <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
-                    <a href="#"><span class="mai-person"></span> Admin</a>
-                    <a href="#"><span class="mai-chatbubbles"></span> 19</a>
-                  </div>
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">Recent Blog</h3>
+            <div class="blog-item">
+              <a class="post-thumb" href="">
+                <img src="../assets/img/doctors/vacc1.jpg" alt="">
+              </a>
+              <div class="content">
+                <h5 class="post-title"><a href="#">එන්නත් කාලසටහන් සහ නව එන්නත් පිළිබඳ යාවත්කාලීන කිරීම් තිබේ.</a></h5>
+                <div class="meta">
+                  <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
+                  <a href="#"><span class="mai-person"></span> Admin</a>
+                  <a href="#"><span class="mai-chatbubbles"></span> 19</a>
                 </div>
               </div>
             </div>
-
-            <div class="sidebar-block">
-              <h3 class="sidebar-title">Important Message</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+            <div class="blog-item">
+              <a class="post-thumb" href="">
+                <img src="../assets/img/develop.jpg" alt="">
+              </a>
+              <div class="content">
+                <h5 class="post-title"><a href="#">ප්‍රතිශක්තිකරණ වැඩසටහන් හෝ පෝෂණ දැනුවත් කිරීමේ වැනි යාවත්කාලීන කිරීම්.</a></h5>
+                <div class="meta">
+                  <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
+                  <a href="#"><span class="mai-person"></span> Admin</a>
+                  <a href="#"><span class="mai-chatbubbles"></span> 19</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-item">
+              <a class="post-thumb" href="">
+                <img src="../assets/img/babymilk.jpg" alt="">
+              </a>
+              <div class="content">
+                <h5 class="post-title"><a href="#">අලුත උපන් දරුවන් රැකබලා ගැනීම, මව්කිරි දීම සහ මුල් ළමාවිය අධ්‍යාපනය පිළිබඳ උපදෙස්</a></h5>
+                <div class="meta">
+                  <a href="#"><span class="mai-calendar"></span> July 12, 2018</a>
+                  <a href="#"><span class="mai-person"></span> Admin</a>
+                  <a href="#"><span class="mai-chatbubbles"></span> 19</a>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-title">Important Data</h3>
+            <table class="table-custom">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MOH</td>
+                  <td>351 Maho Street, MA 02038</td>
+                </tr>
+                <tr>
+                  <td>Contact</td>
+                  <td>701-573-7582</td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td>healthcare@temporary.net</td>
+                </tr>
+                <tr>
+                  <td>Website</td>
+                  <td><a href="https://macodeid.com/" target="_blank">MACode ID</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
         </div>
-      </div> <!-- .row -->
-    </div> <!-- .container -->
+      </div>
+    </div> <!-- .row -->
+  </div> <!-- .container -->
   </div> <!-- .page-section -->
 
   <footer class="page-footer">
@@ -329,7 +320,6 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Special News</a></li>
             <li><a href="#">Contact</a></li>
-
           </ul>
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
@@ -365,23 +355,16 @@
           </div>
         </div>
       </div>
-
       <hr>
-
       <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
     </div> <!-- .container -->
   </footer> <!-- .page-footer -->
 
   <script src="../assets/js/jquery-3.5.1.min.js"></script>
-
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
   <script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-
   <script src="../assets/vendor/wow/wow.min.js"></script>
-
   <script src="../assets/js/theme.js"></script>
-
 </body>
 
 </html>

@@ -240,6 +240,11 @@
                 </div>
             </div>
             <div class="content">
+                @yield('content')
+                @include('library.scripts')
+
+                <br><br><br><br><br><br>
+
                 <!-- content here -->
                 <div class="report-container">
                     <h1> Report of Registered users</h1>
@@ -301,8 +306,7 @@
                         </tbody>
                     </table>
                 </div>
-                @yield('content')
-                @include('library.scripts')
+
             </div>
         </div>
     </div>

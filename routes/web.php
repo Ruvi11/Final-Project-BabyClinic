@@ -119,10 +119,7 @@ Route::get('/pro', function () {
     return view('profile/edit');
 });
 
-
-Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
-Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::resource('posts', PostController::class);
 
 
 Route::get('/tasks', [ClinicController::class, 'listTasks'])->name('tasks.index');

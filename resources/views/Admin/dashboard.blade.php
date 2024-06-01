@@ -152,7 +152,7 @@
                 <li><a href="" class="active"><i class="fas fa-home"></i> My dashboard</a></li>
                 <li><a href="{{ url('/employee') }}">Report</a></li>
                 <li><a href="Admin/index">Create Clinic</a></li>
-                <li><a href="posts/create">Add News</a></li>
+                <li><a href="{{ route('posts.create') }}">Posts</a>
                 <li> <a href="/event">Charts</a></li>
                 <li><a href="create-clinics">Announcment</a></li>
                 <li><a href="">Feedback</a></li>

@@ -1,84 +1,41 @@
 @extends('Admin/dashboard')
 
 @section('content')
+@extends('layout')
+
+@section('content')
 <div class="container">
-    <h3 align="center" class="mt-5">Create new Post </h3>
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .custom-table {
-            background-color: lightblue;
-        }
-    </style>
-    <div class="row">
-        <div class="col-md-2">
-        </div>
-        <div class="col-md-12">
-
-            <div class="form-area">
-                <form method="POST" action="{{ route('posts.store') }}">
-                    @csrf
-                    <table class="table table-bordered custom-table">
-                        <tr>
-                            <th>
-                                <label for="title">Title:</label>
-                            </th>
-                            <td>
-                                <input type="text" id="title" name="title" class="form-control" value="{{ old('title') }}">
-                                @error('title')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="body">Body:</label>
-                            </th>
-                            <td>
-                                <textarea id="body" name="body" class="form-control">{{ old('body') }}</textarea>
-                                @error('body')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="text-right">
-                                <button type="submit" class="btn btn-primary">Create</button>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-        </div>
+    <h1 class="mt-5">Posts</h1>
+    <a href="{{ route('posts.create') }}" class="btn btn-primary mb-3">Create Post</a>
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        {{ $message }}
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
+    @endif
+    <table class="table table-bordered">
+        <tr>
+            <th>No</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th width="280px">Action</th>
+        </tr>
+        @foreach ($posts as $post)
+        <tr>
 
-    </html>
-
-
-    @endsection
-
-
-    @push('css')
-    <style>
-        .form-area {
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #b3e5fc;
-        }
-
-        .bi-trash-fill {
-            color: red;
-            font-size: 18px;
-        }
-
-        .bi-pencil {
-            color: green;
-            font-size: 18px;
-            margin-left: 20px;
-        }
-    </style>
-    @endpush
+            <td>{{ $post->title }}</td>
+            <td>{{ $post->body }}</td>
+            <td>
+                <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+        @endforeach
+    </table>
+    {!! $posts->links() !!}
+</div>
+@endsection
